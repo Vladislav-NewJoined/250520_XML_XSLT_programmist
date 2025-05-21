@@ -1,28 +1,347 @@
-﻿C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea
+C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\js
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\all_code.txt
+C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\README_ИНСТРУКЦИЯ.txt
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\.gitignore
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\250520_XML_XSLT_programmist.iml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\cody_project_settings.xml
+C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\encodings.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\misc.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\modules.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\vcs.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\workspace.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\js\test.js
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Flat.txt
-C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Groups.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\groups_to_list.xslt
-C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\List.xml
+C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Groups.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\list_to_groups.xslt
+C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\List.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\numbers_template.xslt
-C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Tree.xml
 C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\tree_to_flat.xslt
+C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Tree.xml
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\README_ИНСТРУКЦИЯ.txt ===
+
+Проект: Тестовое задание для вакансии: XML / XSLT‑программист
+https://saransk.hh.ru/vacancy/120604409?hhtmFrom=chat
+
+Автор: Созин Владислав
+Контакты:
+Telegram: https://t.me/tess_SV
+Email: sozin.vladislav@mail.ru
+
+Содержание проекта
+В проекте реализованы решения тестового задания по JavaScript и XSLT 1.0:
+
+Папка js/ — решения на JavaScript (файл test.js)
+
+Папка xslt/ — решения на XSLT и тестовые данные:
+
+Groups.xml, List.xml, Tree.xml, Flat.txt — входные и эталонные выходные файлы
+
+groups_to_list.xslt — Groups.xml → List.xml
+
+list_to_groups.xslt — List.xml → Groups.xml
+
+tree_to_flat.xslt — Tree.xml → Flat.txt
+
+numbers_template.xslt — шаблон для вывода чисел от 0 до M
+
+Как проверить решения
+1. Проверка JavaScript
+Файл: js/test.js
+
+Откройте файл в любом редакторе или скопируйте его содержимое.
+
+Запустите файл в Node.js или браузере (F12 → Console → вставить код).
+
+В файле уже есть встроенные проверки (console.assert). Если ошибок нет — значит, всё работает правильно.
+
+При запуске вы увидите сообщения:
+
+text
+getFact работает корректно
+capitalize работает корректно
+getNFunctions работает корректно
+getTotalPrice работает корректно
+2. Проверка XSLT-преобразований
+Вариант А: Через онлайн-сервис
+Откройте сайт: https://www.utilities-online.info/xsltransformation
+
+Вставьте содержимое нужного XML-файла в поле "XML Input".
+
+Вставьте содержимое нужного XSLT-файла в поле "XSL Input".
+
+Нажмите "Transform XML with XSL".
+
+В поле "Result" появится результат. Сравните его с эталонным файлом.
+
+Вариант Б: Через XML Notepad 2007 (Windows)
+Скачайте и установите XML Notepad 2007.
+
+Откройте нужный XML-файл.
+
+В меню выберите "XSL Transform".
+
+Укажите нужный XSLT-файл.
+
+Нажмите "Transform" — результат появится в новом окне.
+
+Вариант В: Через Saxon-HE (универсально)
+Скачайте Saxon-HE JAR.
+
+Убедитесь, что установлен Java.
+
+Откройте командную строку в папке с файлами.
+
+Выполните команду:
+
+text
+java -jar saxon-he-12.4.jar -s:Groups.xml -xsl:groups_to_list.xslt -o:result.xml
+(замените имена файлов по необходимости)
+
+Откройте result.xml и сравните с эталонным файлом.
+
+3. Описание файлов
+Groups.xml — описание групп и их элементов
+
+List.xml — линейный список элементов с указанием группы
+
+Tree.xml — древовидная структура
+
+Flat.txt — плоский список путей из дерева
+
+groups_to_list.xslt — XSLT для преобразования Groups.xml → List.xml
+
+list_to_groups.xslt — XSLT для преобразования List.xml → Groups.xml
+
+tree_to_flat.xslt — XSLT для преобразования Tree.xml → Flat.txt
+
+numbers_template.xslt — XSLT-шаблон для вывода строки чисел от 0 до M
+
+Вопросы и поддержка
+Если у вас возникнут вопросы по запуску, проверке или доработке решений — пишите мне в Telegram или на почту, я оперативно помогу.
+
+Примечания
+Все XSLT-файлы написаны для версии 1.0.
+
+JS-код совместим с современными браузерами и Node.js.
+
+Если онлайн-сервисы временно недоступны, используйте локальные программы (XML Notepad, Saxon-HE).
+
+С уважением, Созин Владислав
++7 909 328-59-88 (WhatsApp)
+https://t.me/tess_SV (Telegram)
+sozin.vladislav@mail.ru
+
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\.gitignore ===
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Environment-dependent path to Maven home directory
+/mavenHomeManager.xml
+
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\250520_XML_XSLT_programmist.iml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\cody_project_settings.xml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CodyProjectSettings">
+    <option name="lastActivationState" value="true" />
+  </component>
+</project>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\encodings.xml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/all_code.txt" charset="UTF-8" />
+  </component>
+</project>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\misc.xml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\modules.xml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/250520_XML_XSLT_programmist.iml" filepath="$PROJECT_DIR$/.idea/250520_XML_XSLT_programmist.iml" />
+    </modules>
+  </component>
+</project>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\vcs.xml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+</project>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\.idea\workspace.xml ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a3d9c5c-5d8a-430f-80d9-59ac67c1668e" name="Changes" comment="250521 1256 commit">
+      <change beforePath="$PROJECT_DIR$/README_ИНСТРУКЦИЯ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README_ИНСТРУКЦИЯ.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_code.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Vladislav-NewJoined&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Vladislav-NewJoined/250520_XML_XSLT_programmist.git&quot;,
+    &quot;accountId&quot;: &quot;2bc4328f-8740-41bd-a90c-5cf5e4ab3c71&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2xML35XmU38clbz0J0fOBj8bsOn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ChatTagsLlmMigration": "true",
+    "RunOnceActivity.ClientConfigCleanupMigration": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
+    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Владислав/12 DraftsIdeaProjects/250520_XML_XSLT_programmist",
+    "settings.editor.selected.configurable": "File.Encoding"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a3d9c5c-5d8a-430f-80d9-59ac67c1668e" name="Changes" comment="" />
+      <created>1747742795650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747742795650</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1200 commit">
+      <option name="closed" value="true" />
+      <created>1747818013687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747818013687</updated>
+    </task>
+    <task id="LOCAL-00002" summary="250521 1256 commit">
+      <option name="closed" value="true" />
+      <created>1747821382353</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747821382353</updated>
+    </task>
+    <task id="LOCAL-00003" summary="250521 1256 commit">
+      <option name="closed" value="true" />
+      <created>1747821435393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747821435393</updated>
+    </task>
+    <task id="LOCAL-00004" summary="250521 1256 commit">
+      <option name="closed" value="true" />
+      <created>1747822000428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747822000428</updated>
+    </task>
+    <task id="LOCAL-00005" summary="250521 1256 commit">
+      <option name="closed" value="true" />
+      <created>1747822014437</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747822014437</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1200 commit" />
+    <MESSAGE value="250521 1256 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="250521 1256 commit" />
+  </component>
+</project>
 
 
 === FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\js\test.js ===
 
-// 1. Р¤Р°РєС‚РѕСЂРёР°Р»
+// 1. Факториал
 function getFact(n) {
   if (n === 1) return 1;
   return n * getFact(n - 1);
@@ -30,7 +349,7 @@ function getFact(n) {
 console.assert(getFact(1) === 1);
 console.assert(getFact(4) === 24);
 console.assert(getFact(6) === 720);
-console.log("getFact СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ");
+console.log("getFact работает корректно");
 
 // 2. capitalize
 function capitalize(str) {
@@ -40,9 +359,9 @@ function capitalize(str) {
 console.assert(capitalize("foo") === "Foo");
 console.assert(capitalize("Bar") === "Bar");
 console.assert(capitalize("hello World!") === "Hello World!");
-console.log("capitalize СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ");
+console.log("capitalize работает корректно");
 
-// 3. getNFunctions (РґРѕ ES2015)
+// 3. getNFunctions (до ES2015)
 function getNFunctionsOld(n) {
   var arr = [];
   for (var i = 1; i <= n; i++) {
@@ -68,7 +387,7 @@ var resultNew = getNFunctionsNew(4);
 console.assert(resultNew[0]() === 1);
 console.assert(resultNew[2]() === 3);
 
-console.log("getNFunctions СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ");
+console.log("getNFunctions работает корректно");
 
 // 4. getTotalPrice
 function getTotalPrice() {
@@ -80,5 +399,216 @@ function getTotalPrice() {
 }
 console.assert(getTotalPrice(0.21, 0.79) === 1);
 console.assert(getTotalPrice(0.20, 10.33, 23.4, 100) === 133.93);
-console.log("getTotalPrice СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ");
+console.log("getTotalPrice работает корректно");
 
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Flat.txt ===
+
+"0"
+"0/1"
+"0/1/1"
+"0/1/1/2"
+"0/1/1/11"
+"0/1/22"
+"0/1/22/33"
+"0/1/22/33/444"
+"0/2"
+"0/2/3"
+"0/2/3/111"
+"0/2/3/222"
+"0/2/3/222/44"
+"0/2/3/222/55"
+"0/2/3/333"
+"0/2/3/555"
+"0/2/4"
+"0/3"
+"0/3/5"
+"0/3/5"
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\groups_to_list.xslt ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" indent="yes"/>
+
+  <xsl:template match="/groups">
+    <list>
+      <xsl:for-each select="group/item">
+        <item name="{@name}" group="{../@name}" />
+      </xsl:for-each>
+    </list>
+  </xsl:template>
+
+</xsl:stylesheet>
+
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Groups.xml ===
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Groups.xml — описанием сущностей обобщенных по принадлежности к той или иной группе -->
+<groups>
+  <group name="1">
+    <item name="1"/>
+    <item name="2"/>
+    <item name="11"/>
+    <item name="22"/>
+    <item name="33"/>
+    <item name="444"/>
+  </group>
+  <group name="2">
+    <item name="3"/>
+    <item name="4"/>
+    <item name="111"/>
+    <item name="222"/>
+    <item name="333"/>
+    <item name="555"/>
+  </group>
+  <group name="3">
+    <item name="5"/>
+    <item name="44"/>
+    <item name="55"/>
+  </group>
+</groups>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\list_to_groups.xslt ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" indent="yes"/>
+
+  <xsl:key name="groups" match="item" use="@group" />
+
+  <xsl:template match="/list">
+    <groups>
+      <xsl:for-each select="item[generate-id() = generate-id(key('groups', @group)[1])]">
+        <group name="{@group}">
+          <xsl:for-each select="key('groups', @group)">
+            <item name="{@name}" />
+          </xsl:for-each>
+        </group>
+      </xsl:for-each>
+    </groups>
+  </xsl:template>
+
+</xsl:stylesheet>
+
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\List.xml ===
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- List.xml — линейное описание сущностей с указанием у каждой из них группы, к которой она принадлежит -->
+<list>
+  <item name="1" group="1"/>
+  <item name="2" group="1"/>
+  <item name="5" group="3"/>
+  <item name="3" group="2"/>
+  <item name="4" group="2"/>
+  <item name="11" group="1"/>
+  <item name="22" group="1"/>
+  <item name="33" group="1"/>
+  <item name="44" group="3"/>
+  <item name="55" group="3"/>
+  <item name="111" group="2"/>
+  <item name="222" group="2"/>
+  <item name="333" group="2"/>
+  <item name="444" group="1"/>
+  <item name="555" group="2"/>
+</list>
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\numbers_template.xslt ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="text" encoding="UTF-8"/>
+
+  <xsl:template match="/">
+    <xsl:call-template name="numbers">
+      <xsl:with-param name="m" select="5"/> <!-- Замените 5 на нужное число -->
+    </xsl:call-template>
+  </xsl:template>
+
+  <xsl:template name="numbers">
+    <xsl:param name="m"/>
+    <xsl:param name="i" select="0"/>
+    <xsl:value-of select="$i"/>
+    <xsl:if test="$i &lt; $m">
+      <xsl:text> </xsl:text>
+      <xsl:call-template name="numbers">
+        <xsl:with-param name="m" select="$m"/>
+        <xsl:with-param name="i" select="$i + 1"/>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+</xsl:stylesheet>
+
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\tree_to_flat.xslt ===
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="text" encoding="UTF-8"/>
+
+  <xsl:template match="/">
+    <xsl:apply-templates select="tree"/>
+  </xsl:template>
+
+  <xsl:template match="*">
+    <xsl:call-template name="print-path"/>
+    <xsl:apply-templates select="*"/>
+  </xsl:template>
+
+  <xsl:template name="print-path">
+    <xsl:for-each select="ancestor-or-self::*">
+      <xsl:if test="position() != 1">/</xsl:if>
+      <xsl:value-of select="name()"/>
+    </xsl:for-each>
+    <xsl:text>&#10;</xsl:text>
+  </xsl:template>
+</xsl:stylesheet>
+
+
+
+=== FILE: C:\Владислав\12 DraftsIdeaProjects\250520_XML_XSLT_programmist\xslt\Tree.xml ===
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tree.xml - Описание некоторого дерева данных. Уровень вложенности не ограничен -->
+<node name="0">
+  <node name="1">
+    <node name="1">
+      <node name="2" />  <!-- Узел «A» -->
+      <node name="11" /> <!-- Узел «B» -->
+    </node>
+    <node name="22">     <!-- Узел «C» -->
+      <node name="33">
+        <node name="444" />
+      </node>
+    </node>
+  </node>
+  <node name="2">
+    <node name="3">
+      <node name="111" />
+      <node name="222">
+        <node name="44" />
+        <node name="55" />
+      </node>
+      <node name="333" />
+      <node name="555" />
+    </node>
+    <node name="4" />
+  </node>
+  <node name="3">
+    <node name="5" />
+    <node name="5" />
+  </node>
+</node>
