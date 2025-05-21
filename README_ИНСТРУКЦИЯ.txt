@@ -112,6 +112,6 @@ JS-код совместим с современными браузерами и
 Это гарантирует корректный и валидный XML на выходе.
 
 С уважением, Созин Владислав
-+7 909 328-59-88 (WhatsApp) 
-https://t.me/tess_SV (Telegram) 
++7 909 328-59-88 (WhatsApp)
+https://t.me/tess_SV (Telegram)
 sozin.vladislav@mail.ru
