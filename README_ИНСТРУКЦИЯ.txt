@@ -1,7 +1,7 @@
 Проект: Тестовое задание для вакансии: XML / XSLT‑программист
 https://saransk.hh.ru/vacancy/120604409?hhtmFrom=chat
 
-Автор: ВСозин Владислав 
+Автор: Созин Владислав
 Контакты:
 Telegram: https://t.me/tess_SV
 Email: sozin.vladislav@mail.ru
