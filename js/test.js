@@ -18,7 +18,7 @@ console.assert(capitalize("Bar") === "Bar");
 console.assert(capitalize("hello World!") === "Hello World!");
 console.log("capitalize работает корректно");
 
-// 3. getNFunctions (до ES2015)
+// 3. getNFunctionsOld (до ES2015)
 function getNFunctionsOld(n) {
   var arr = [];
   for (var i = 1; i <= n; i++) {
@@ -32,7 +32,7 @@ var resultOld = getNFunctionsOld(4);
 console.assert(resultOld[0]() === 1);
 console.assert(resultOld[2]() === 3);
 
-// getNFunctions (ES2015)
+// 3. getNFunctionsNew (ES2015+)
 function getNFunctionsNew(n) {
   const arr = [];
   for (let i = 1; i <= n; i++) {
