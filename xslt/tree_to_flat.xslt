@@ -8,16 +8,15 @@
   </xsl:template>
 
   <xsl:template match="*">
-    <xsl:call-template name="print-path"/>
-    <xsl:apply-templates select="*"/>
-  </xsl:template>
-
-  <xsl:template name="print-path">
     <xsl:text>"</xsl:text>
     <xsl:for-each select="ancestor-or-self::*">
       <xsl:if test="position() != 1">/</xsl:if>
       <xsl:value-of select="@name"/>
     </xsl:for-each>
-    <xsl:text>"&#10;</xsl:text>
+    <xsl:text>"</xsl:text>
+    <xsl:if test="count(.//*) + count(following::*) &gt; 0">
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
+    <xsl:apply-templates select="*"/>
   </xsl:template>
 </xsl:stylesheet>
