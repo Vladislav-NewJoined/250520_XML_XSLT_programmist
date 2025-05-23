@@ -4,7 +4,7 @@
   <xsl:output method="text" encoding="UTF-8"/>
 
   <xsl:template match="/">
-    <xsl:apply-templates select="tree"/>
+    <xsl:apply-templates select="*"/>
   </xsl:template>
 
   <xsl:template match="*">
@@ -13,10 +13,11 @@
   </xsl:template>
 
   <xsl:template name="print-path">
+    <xsl:text>"</xsl:text>
     <xsl:for-each select="ancestor-or-self::*">
       <xsl:if test="position() != 1">/</xsl:if>
-      <xsl:value-of select="name()"/>
+      <xsl:value-of select="@name"/>
     </xsl:for-each>
-    <xsl:text>&#10;</xsl:text>
+    <xsl:text>"&#10;</xsl:text>
   </xsl:template>
 </xsl:stylesheet>
